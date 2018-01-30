@@ -8,8 +8,3 @@ Koga Jo, Jaime Rodrigo | Scrum Master, Product Owner
 Martinez Velez, Carlos Antonio | Team Member
 Rojas Villar, Humberto Giancarlo | Team Member
 Zevallos Reyna, Jesus Ernesto | Team Member
----|---
-
-
-
-
