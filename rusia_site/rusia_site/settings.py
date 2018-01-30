@@ -25,7 +25,7 @@ SECRET_KEY = '*if#92^ec$var#lp2!edbw*fytfwhn(q_tff8rbj7oz1*py203'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shrouded-ravine-36489.herokuapp.com']
+ALLOWED_HOSTS = ['shrouded-ravine-36489.herokuapp.com', 'localhost']
 
 
 # Application definition
