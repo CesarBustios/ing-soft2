@@ -1,5 +1,10 @@
 # -*- coding: -utf-8 -*-
+import random
 from django.db import migrations
+
+
+PUNTAJE_MINIMO = 85
+PUNTAJE_MAXIMO = 100
 
 
 def insert_data(apps, schema_editor):
@@ -830,8 +835,12 @@ def insert_data(apps, schema_editor):
     ]
 
     Jugador = apps.get_model('app', 'Jugador')
-    for nombre, idpais_id in jugadores:
-        Jugador.objects.create(nombre=nombre, idpais_id=idpais_id)
+    for nombre, pais_id in jugadores:
+        Jugador.objects.create(
+            nombre=nombre,
+            pais_id=pais_id,
+            puntaje=random.randint(PUNTAJE_MINIMO, PUNTAJE_MAXIMO)
+        )
 
 
 class Migration(migrations.Migration):
