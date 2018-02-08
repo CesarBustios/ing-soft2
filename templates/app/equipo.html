@@ -222,3 +222,26 @@
     </div>
   </form>
 {% endblock %}
+
+{% block script %}
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#id_selecciones").on("change", obtener_jugadores);
+      obtener_jugadores();
+    });
+
+    function obtener_jugadores() {
+      var paisId = $("#id_selecciones").val();
+      var request = $.ajax({
+        type: "GET",
+        url: "{% url 'ajax_obtener_jugadores' %}",
+        data: {
+            "pais_id": paisId
+        }
+      });
+      request.done(function(response) {
+          $("#id_jugadores").html(response.jugadores);
+      });
+    }
+  </script>
+{% endblock %}
