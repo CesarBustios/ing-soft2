@@ -5957,6 +5957,13 @@ button.bg-dark:focus {
 .text-white {
   color: #fff !important; }
 
+.text-navy {
+  color: #000080 !important; }
+
+.text-bold-navy {
+  color: #000080 !important;
+  font-weight: bold;}
+
 .text-primary {
   color: #005BF4 !important; }
 
