@@ -5957,13 +5957,6 @@ button.bg-dark:focus {
 .text-white {
   color: #fff !important; }
 
-.text-navy {
-  color: #000080 !important; }
-
-.text-bold-navy {
-  color: #000080 !important;
-  font-weight: bold;}
-
 .text-primary {
   color: #005BF4 !important; }
 
@@ -6131,5 +6124,11 @@ html, body {
     background: rgba(0, 0, 0, 0.75); }
 
 .field-img {
-  background-image: url('../img/3.png');
+  background: url('../img/3.png') no-repeat center;
+}
+
+.field-position {
+  font-size: 18px;
+  color: #000080 !important;
+  font-weight: bold;
 }
