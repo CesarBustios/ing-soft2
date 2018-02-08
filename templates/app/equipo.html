@@ -323,7 +323,12 @@
       } else if (!jugador) {
         alert("Debe seleccionar un jugador");
       } else {
-
+        var posicionId = $(".position:checked").attr("id");
+        var nombreJugador = $("#id_jugadores option:selected").text()
+        // Cambiar nombre al label
+        $("[for=" + posicionId + "]").text(nombreJugador);
+        // Setear ID del jugador
+        $("#id_" + posicion).val(jugador);
       }
     }
 
