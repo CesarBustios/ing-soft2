@@ -35,6 +35,9 @@ class EquipoForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super(EquipoForm, self).__init__(*args, **kwargs)
+        self.fields['posiciones'].widget.attrs = {
+            'class': 'position'
+        }
         self.fields['selecciones'].widget.attrs = {
             'class': 'form-control'
         }
