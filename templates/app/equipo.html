@@ -154,6 +154,7 @@
                     <td></td>
                     <td class="field-position">
                       {{form.posiciones.4}}
+                      {{form.posiciones.4.0}}
                     </td>
                     <td></td>
                     <td></td>
@@ -213,7 +214,7 @@
               </div>
             </div>
             <div class="form-group mt-3">
-              <button class="btn btn-default" type="button">CAMBIAR</button>
+              <button id="btn-cambiar" class="btn btn-default" type="button">CAMBIAR</button>
               <button class="btn btn-primary" type="submit">CONFIRMAR</button>
             </div>
           </div>
@@ -226,6 +227,7 @@
 {% block script %}
   <script type="text/javascript">
     $(document).ready(function() {
+      $("#btn-cambiar").on("click", cambiar_jugador);
       $(".position").on("change", clear);
       $("#id_selecciones").on("change", obtener_jugadores);
       obtener_jugadores();
@@ -233,6 +235,20 @@
 
     function clear() {
       $("#id_selecciones").val("").trigger("change");
+    }
+
+    function cambiar_jugador() {
+      // Validaciones
+      var posicion = $(".position:checked").val();
+      var jugador = $("#id_jugadores").val();
+
+      if (!posicion) {
+        alert("Debe seleccionar una posición");
+      } else if (!jugador) {
+        alert("Debe seleccionar un jugador");
+      } else {
+
+      }
     }
 
     function obtener_jugadores() {
