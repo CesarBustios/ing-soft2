@@ -303,6 +303,7 @@
 {% block script %}
   <script type="text/javascript">
     $(document).ready(function() {
+      $("form").on("submit", validar_juego);
       $("#btn-cambiar").on("click", cambiar_jugador);
       $(".position").on("change", clear);
       $("#id_selecciones").on("change", obtener_jugadores);
@@ -311,6 +312,22 @@
 
     function clear() {
       $("#id_selecciones").val("").trigger("change");
+    }
+
+    function validar_juego(event) {
+      // Estos son los hidden inputs que van a contener el ID de los jugadores
+      // para cada posición
+      var valid = true;
+      $(".jugador").each(function(pos, elem) {
+        var id = $(elem).val();
+        if (!id) {
+          valid = false;
+        }
+      });
+      if (!valid) {
+        alert("Debe escoger todos los jugadores");
+        event.preventDefault();
+      }
     }
 
     function cambiar_jugador() {
