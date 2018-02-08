@@ -16,21 +16,14 @@ class EquipoView(TemplateView):
         return context
 
     def post(self, request, *args, **kwargs):
+        context = self.get_context_data()
         form = EquipoForm(request.POST)
+        resultado = 0
         if form.is_valid():
             # Extraemos la informacion solo los campos que nos interesan
-            resultado = 0
             ids = [v for k, v in form.cleaned_data.items() if k not in ['jugadores', 'selecciones', 'posiciones']]
             jugadores = Jugador.objects.filter(id__in=ids)
             for jugador in jugadores:
-                print(jugador.puntaje)
                 resultado += jugador.puntaje
-        return reverse('resultado', kwargs={'puntaje': resultado})
-
-
-class ResultadoView(TemplateView):
-    template_name = 'app/resultado.html'
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(ResultadoView, self).get_context_data(*args, **kwargs)
-        return context
+        context['resultado'] = resultado
+        return self.render_to_response(context=context)

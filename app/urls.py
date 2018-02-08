@@ -8,5 +8,4 @@ from . import views
 urlpatterns = [
     path('', views.EquipoView.as_view(), name='equipo'),
     path('ajax/obtener_jugadores', ajax.obtener_jugadores, name='ajax_obtener_jugadores'),
-    path('resultado/', views.ResultadoView.as_view(), name='resultado'),
 ]
