@@ -226,9 +226,14 @@
 {% block script %}
   <script type="text/javascript">
     $(document).ready(function() {
+      $(".position").on("change", clear);
       $("#id_selecciones").on("change", obtener_jugadores);
       obtener_jugadores();
     });
+
+    function clear() {
+      $("#id_selecciones").val("").trigger("change");
+    }
 
     function obtener_jugadores() {
       var paisId = $("#id_selecciones").val();
