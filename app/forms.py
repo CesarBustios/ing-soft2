@@ -18,7 +18,7 @@ class EquipoForm(forms.Form):
         ('delantero2', 'DELANTERO 2'),
         ('delantero3', 'DELANTERO 3'),
     )
-    posiciones = forms.ChoiceField(choices=POSICIONES_CHOICES, widget=forms.RadioSelect)
+    posiciones = forms.ChoiceField(choices=POSICIONES_CHOICES, widget=forms.RadioSelect, required=False)
     arquero = forms.IntegerField(widget=forms.HiddenInput())
     defensa1 = forms.IntegerField(widget=forms.HiddenInput())
     defensa2 = forms.IntegerField(widget=forms.HiddenInput())
@@ -30,8 +30,8 @@ class EquipoForm(forms.Form):
     delantero1 = forms.IntegerField(widget=forms.HiddenInput())
     delantero2 = forms.IntegerField(widget=forms.HiddenInput())
     delantero3 = forms.IntegerField(widget=forms.HiddenInput())
-    selecciones = forms.ModelChoiceField(queryset=Seleccion.objects.all().order_by('pais'))
-    jugadores = forms.ModelChoiceField(queryset=Jugador.objects.all().order_by('nombre'))
+    selecciones = forms.ModelChoiceField(queryset=Seleccion.objects.all().order_by('pais'), required=False)
+    jugadores = forms.ModelChoiceField(queryset=Jugador.objects.all().order_by('nombre'), required=False)
 
     def __init__(self, *args, **kwargs):
         super(EquipoForm, self).__init__(*args, **kwargs)
