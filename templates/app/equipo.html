@@ -1,264 +1,224 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="py-2 text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="display-1 text-white">Equipo Ideal</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+  <form method="post">
+    {% csrf_token %}
+    {{form.arquero}}
+    {{form.defensa1}}
+    {{form.defensa2}}
+    {{form.defensa3}}
+    {{form.defensa4}}
+    {{form.centro1}}
+    {{form.centro2}}
+    {{form.centro3}}
+    {{form.delantero1}}
+    {{form.delantero2}}
+    {{form.delantero3}}
+    <div class="py-2 text-center">
+      <div class="container">
+        <div class="row">
           <div class="col-md-12">
-            <h1 class="text-center text-white">Jugando en sala de Usuario</h1>
+            <h1 class="display-1 text-white">Equipo Ideal</h1>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="py-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 field-img">
-          <div class="offset-1 col-md-10">
-            <table class="table">
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.1}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.5}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.9}}
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.2}}
-                  </td>
-                  <td></td>
-                  <td> </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="field-position">
-                    {{form.posicion.0}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.6}}
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.8}}
-                  </td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td> </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.3}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.10}}
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.7}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="field-position">
-                    {{form.posicion.4}}
-                  </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr></tr>
-              </tbody>
-            </table>
+    <div class="py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-12">
+              <h1 class="text-center text-white">Jugando en sala de Usuario</h1>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="py-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 bg-light field-position">
-          <table class="table">
-            <thead>
-              <tr></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>NOMBRE DEL JUGADOR</td>
-                <td>PAIS</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td> <select>
-  <option value="1">--NOMBRE--</option>
-</select> </td>
-                <td><select>
-  <option value="0">--PAIS--</option>
-                  <option value="1">RUSIA</option>
-                  <option value="2">NIGERIA</option>
-                  <option value="3">EGIPTO</option>
-                  <option value="4">SENEGAL</option>
-                  <option value="5">MARRUECOS</option>
-                  <option value="6">TUNEZ</option>
-                  <option value="7">BRASIL</option>
-                  <option value="8">URUGUAY</option>
-                  <option value="9">ARGENTINA</option>
-                  <option value="10">COLOMBIA</option>
-                  <option value="11">PERU</option>
-                  <option value="12">IRAN</option>
-                  <option value="13">JAPON</option>
-                  <option value="14">COREA DEL SUR</option>
-                  <option value="15">ARABIA SAUDITA</option>
-                  <option value="16">AUSTRALIA</option>
-                  <option value="17">MEXICO</option>
-                  <option value="18">COSTA RICA</option>
-                  <option value="19">PANAMA</option>
-                  <option value="20">ALEMANIA</option>
-                  <option value="21">INGLATERRA</option>
-                  <option value="22">BELGICA</option>
-                  <option value="23">ESPAÑA</option>
-                  <option value="24">POLONIA</option>
-                  <option value="25">ISLANDIA</option>
-                  <option value="26">SERBIA</option>
-                  <option value="27">FRANCIA</option>
-                  <option value="28">PORTUGAL</option>
-                  <option value="29">CROACIA</option>
-                  <option value="30">SUIZA</option>
-                  <option value="31">SUECIA</option>
-                  <option value="32">DINAMARCA</option>
-
-
-
-</select></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>
-                  <a class="btn btn-primary" href="#">CAMBIAR </a>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td>
-                  <a class="btn btn-primary" href="resultado.html">CONFIRMAR </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <div class="py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 field-img">
+            <div class="offset-1 col-md-10">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.1}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.5}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.9}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.2}}
+                    </td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="field-position">
+                      {{form.posiciones.0}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.6}}
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.8}}
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.3}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.10}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.7}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="field-position">
+                      {{form.posiciones.4}}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="py-2">
+      <div class="container">
+        <div class="row">
+          <div class="offset-1 col-md-10 bg-light field-position">
+            <div class="form-group mt-3">
+              <div class="row">
+                <div class="col-md-6">
+                  {{form.selecciones.label|upper}}
+                  {{form.selecciones}}
+                </div>
+                <div class="col-md-6">
+                  {{form.jugadores.label|upper}}
+                  {{form.jugadores}}
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <button class="btn btn-default" type="button">CAMBIAR</button>
+              <button class="btn btn-primary" type="submit">CONFIRMAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 {% endblock %}
